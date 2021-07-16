@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: SpritesGame
+  m_EditorClassIdentifier: 
+  m_GroupName: SpritesGame
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 3fa3b269f412acd439b6bd51461af7a8
+  m_SerializeEntries:
+  - m_GUID: 21618844a9d117741bb98f9d439e9402
+    m_Address: SpriteAtlas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 4343727234628468602, guid: 21618844a9d117741bb98f9d439e9402, type: 2}
+    m_TargetAsset: {fileID: 4343727234628468602, guid: 21618844a9d117741bb98f9d439e9402, type: 2}
+  - m_GUID: b2c85ba442e958d4d9e40ae9f109a5e1
+    m_Address: SpriteTrailMaterial
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 3d4ff6fe69ef2304fa730c448b7da5cc
+    m_Address: SpriteUI
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 4343727234628468602, guid: 3d4ff6fe69ef2304fa730c448b7da5cc, type: 2}
+    m_TargetAsset: {fileID: 4343727234628468602, guid: 3d4ff6fe69ef2304fa730c448b7da5cc, type: 2}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b46f62c08b1b9d64fbb61b3017d099b7, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 758a4f266135e43408df0f20336a3d6c, type: 2}
+    - {fileID: 11400000, guid: 18de6c767574f1b43b7c95b13b61a577, type: 2}

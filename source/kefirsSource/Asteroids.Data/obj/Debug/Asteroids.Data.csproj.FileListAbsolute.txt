@@ -1,0 +1,9 @@
+C:\Users\limsh\Desktop\KefirTest\source\kefirsSource\Asteroids.Data\bin\Debug\Asteroids.Data.dll
+C:\Users\limsh\Desktop\KefirTest\source\kefirsSource\Asteroids.Data\bin\Debug\Asteroids.Data.pdb
+C:\Users\limsh\Desktop\KefirTest\source\kefirsSource\Asteroids.Data\bin\Debug\Asteroids.Utilities.dll
+C:\Users\limsh\Desktop\KefirTest\source\kefirsSource\Asteroids.Data\bin\Debug\Asteroids.Utilities.pdb
+C:\Users\limsh\Desktop\KefirTest\source\kefirsSource\Asteroids.Data\obj\Debug\Asteroids.Data.csprojAssemblyReference.cache
+C:\Users\limsh\Desktop\KefirTest\source\kefirsSource\Asteroids.Data\obj\Debug\Asteroids.Data.csproj.CoreCompileInputs.cache
+C:\Users\limsh\Desktop\KefirTest\source\kefirsSource\Asteroids.Data\obj\Debug\Asteroids.Data.csproj.CopyComplete
+C:\Users\limsh\Desktop\KefirTest\source\kefirsSource\Asteroids.Data\obj\Debug\Asteroids.Data.dll
+C:\Users\limsh\Desktop\KefirTest\source\kefirsSource\Asteroids.Data\obj\Debug\Asteroids.Data.pdb

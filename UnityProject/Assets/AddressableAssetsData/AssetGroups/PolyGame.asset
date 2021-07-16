@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: PolyGame
+  m_EditorClassIdentifier: 
+  m_GroupName: PolyGame
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 3db31e4dfa7e47c4cb6232278cae237f
+  m_SerializeEntries:
+  - m_GUID: ccf9f8dc222021142af6c722eabaf4b1
+    m_Address: PolyAtlas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 4343727234628468602, guid: ccf9f8dc222021142af6c722eabaf4b1, type: 2}
+    m_TargetAsset: {fileID: 4343727234628468602, guid: ccf9f8dc222021142af6c722eabaf4b1, type: 2}
+  - m_GUID: 906c55a31f60aba48a78fbce7dc51e37
+    m_Address: PolyTrailMaterial
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2100000, guid: 906c55a31f60aba48a78fbce7dc51e37, type: 2}
+    m_TargetAsset: {fileID: 2100000, guid: 906c55a31f60aba48a78fbce7dc51e37, type: 2}
+  - m_GUID: c456fa0c72d77134ba7be4f67bc4589b
+    m_Address: PolyUI
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 4343727234628468602, guid: c456fa0c72d77134ba7be4f67bc4589b, type: 2}
+    m_TargetAsset: {fileID: 4343727234628468602, guid: c456fa0c72d77134ba7be4f67bc4589b, type: 2}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b46f62c08b1b9d64fbb61b3017d099b7, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a6d0cd52ec0973c42ab4531a8aaff433, type: 2}
+    - {fileID: 11400000, guid: 5124766faf6ca584f8ede946cac74280, type: 2}

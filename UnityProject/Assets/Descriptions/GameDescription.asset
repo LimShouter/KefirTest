@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40409dbdfb94888ba3219af0d953bb4, type: 3}
+  m_Name: GameDescription
+  m_EditorClassIdentifier: 
+  offset: 4
+  cameraZ: 10
+  shipDescription:
+    Speed: 3
+    Hp: 3
+  shotDescription:
+    BulletSpeed: 10
+    LaserSpeed: 50
+    FireRate: 5
+    BlastRate: 1
+    ShotLifeTime: 10
+    LaserLifeTime: 0.4
+    LaserHp: 999
+    BulletHp: 1
+  enemyDescription:
+    MinSpeed: 2
+    MaxSpeed: 1
+    AlienSpeed: 2
+    AlienChance: 1
+    AsteroidChance: 9
+    SpawnRate: 6
+  scoreDescription:
+    TimeMultiplier: 1
+    KillMultiplier: 5

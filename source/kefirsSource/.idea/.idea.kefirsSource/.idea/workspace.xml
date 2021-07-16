@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="12934e14-6a45-4f3a-a1c4-30afe0fe51b9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Asteroid.Core/Class1.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Core/Class1.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Presenters/Class1.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Data/Class1.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Description/Class1.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.View/Class1.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Utilities/Class1.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Utilities/Vector2.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.View/ISubEnemyView.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Presenters/Enemies/AlienEnemyPresenter.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Presenters/Enemies/AsteroidEnemyPresenter.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Core/Pull/BasePull.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.View/IShipView.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Presenters/GameManagerPresenter.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Presenters/ShipPresenter.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Data/Shot/ShotType.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Data/Shot/ShotFactoryData.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.View/ISubShotView.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.View/IPullContainerCollection.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Description/ShotDescription.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.View/Screens/IGameScreenView.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Presenters/Screens/GameScreenPresenter.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Presenters/Shot/ShotPresenter.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Core/EnvironmentData.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.View/Screens/IRematchScreenView.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Presenters/Screens/RematchScreenPresenter.cs" />
+      <option value="$PROJECT_DIR$/Asteroids/GameController.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Core/DescriptionCollection.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Data/Enemies/EnemyData.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Data/Enemies/EnemyFactoryData.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Data/Enemies/SubEnemyData.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Data/Screens/GameScreenData.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Data/Shot/ShotData.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Data/Shot/SubShotData.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Data/ScoreData.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Data/ShipData.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Presenters/Enemies/BaseEnemyPresenter.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Presenters/Enemies/EnemyFactoryPresenter.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Presenters/Enemies/EnemyPresenter.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Presenters/Screens/BaseScreenPresenter.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Presenters/Shot/ShotFactoryPresenter.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Presenters/Shot/SubShotPresenter.cs" />
+      <option value="$PROJECT_DIR$/Asteroids.Presenters/ScorePresenter.cs" />
+    </changedPaths>
+  </component>
+  <component name="ProjectId" id="1vEQ2EMuDYhQemJwaEQ0RnwdpnY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="12934e14-6a45-4f3a-a1c4-30afe0fe51b9" name="Default Changelist" comment="" />
+      <created>1626124559306</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1626124559306</updated>
+      <workItem from="1626124576989" duration="10521000" />
+      <workItem from="1626260991283" duration="2082000" />
+      <workItem from="1626297255674" duration="14748000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
