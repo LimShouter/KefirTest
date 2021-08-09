@@ -18,6 +18,8 @@ namespace Asteroids.Presenters
 
         public void Attach()
         {
+            _data.KillScore = 0;
+            _data.TimeScore = 0;
             _data.SetMaxScore(_environment.EnvironmentData.SaveModel.Get<int>("MaxScore"));
             _environment.EnvironmentData.EnemyData.EnemyFactoryData.OnKill += AddKillScore;
             _timer.OnNotify += AddTimeScore;
@@ -26,8 +28,6 @@ namespace Asteroids.Presenters
 
         public void Detach()
         {
-            _data.KillScore = 0;
-            _data.TimeScore = 0;
             _environment.EnvironmentData.EnemyData.EnemyFactoryData.OnKill -= AddKillScore;
             _timer.OnNotify -= AddTimeScore;
             _environment.CollectionContainer.TimerCollection.Remove(_timer);
@@ -52,7 +52,7 @@ namespace Asteroids.Presenters
             if (score > _data.MaxScore.Value)
             {
                 _data.SetMaxScore(score);
-                _environment.EnvironmentData.SaveModel.Set("MaxScore", _data.MaxScore);
+                _environment.EnvironmentData.SaveModel.Set("MaxScore", _data.MaxScore.Value);
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using Asteroids.View;
+using Asteroids.View.Containers;
 
 public class CustomRandom : ICustomRandom
 {

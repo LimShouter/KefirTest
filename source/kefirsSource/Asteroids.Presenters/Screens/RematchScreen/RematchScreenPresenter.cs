@@ -14,13 +14,14 @@ namespace Asteroids.Presenters.Screens.RematchScreen
         public override void Attach()
         {
             base.Attach();
-            _view.ScoreTextView.SetScore(_environment.EnvironmentData.ScoreData.CurrentScore.Value);
+            _environment.EnvironmentData.ScoreData.CurrentScore.OnNotifyChanged += _view.ScoreTextView.SetScore;
             _view.OnPlay += Play;
         }
 
         public override void Detach()
         {
             base.Detach();
+            _environment.EnvironmentData.ScoreData.CurrentScore.OnNotifyChanged -= _view.ScoreTextView.SetScore;
             _view.OnPlay -= Play;
         }
 

@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
-using UnityEngine;
 
-public class ContentManager : MonoBehaviour
+public class ContentManager 
 {
     private Dictionary<ContentGroups, List<IContentLoader>> _contentLoaders = new Dictionary<ContentGroups, List<IContentLoader>>();
 
-    private void Awake()
+    public void Awake()
     {
         _contentLoaders.Add(ContentGroups.UI,new List<IContentLoader>());
         _contentLoaders.Add(ContentGroups.Game,new List<IContentLoader>());

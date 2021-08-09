@@ -1,5 +1,7 @@
 ﻿using System;
-using Asteroids.View.Screens;
+using Asteroids.View.Containers.Screens;
+using Asteroids.View.ViewManagers.Screens.GameScreenView;
+using DefaultNamespace;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,12 +11,9 @@ public class RematchScreenView : MonoBehaviour,IRematchScreenView
     public event Action OnPlay;
 
     [SerializeField] private Button playButton;
-    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private ScoreTextView scoreTextView;
+    public IScoreTextView ScoreTextView => scoreTextView;
 
-    public void SetScore(int score)
-    {
-        scoreText.text = score.ToString();
-    }
 
     public void Show()
     {

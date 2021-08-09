@@ -1,5 +1,6 @@
 ﻿using System;
 using Asteroids.View;
+using Asteroids.View.ViewManagers;
 using UnityEngine;
 
 public class InputView : MonoBehaviour,IInputView

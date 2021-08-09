@@ -1,5 +1,5 @@
 ﻿using System;
-using Asteroids.View;
+using Asteroids.View.ViewManagers;
 using UnityEngine;
 using UnityEngine.UI;
 using Vector2 = Asteroids.Utilities.Vector2;

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.ResourceProviders;
@@ -8,7 +9,7 @@ using UnityEngine.UI;
 public class VisualManager : MonoBehaviour
 {
     [SerializeField] private List<GameStyleDescriptionSo> _gameStyleDescriptions;
-    [SerializeField] private ContentManager contentManager;
+    private ContentManager contentManager = new ContentManager();
     [SerializeField] private Button changeVisualButton;
     [SerializeField] private List<BaseCustomSpriteRenderer> renderers;
     [SerializeField] private List<UISpriteRenderer> uiRenderers;
@@ -17,6 +18,11 @@ public class VisualManager : MonoBehaviour
     private ContentLoader<SpriteAtlas> _spriteLoader;
     private ContentLoader<SpriteAtlas> _uiSpriteLoader;
     private ContentLoader<Material> _materialLoader;
+
+    private void Awake()
+    {
+        contentManager.Awake();
+    }
 
     private void Start()
     {
