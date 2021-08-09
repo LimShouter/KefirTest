@@ -1,6 +1,0 @@
-C:\Users\limsh\Desktop\KefirTest\source\kefirsSource\Asteroids.Utilities\bin\Debug\Asteroids.Utilities.dll
-C:\Users\limsh\Desktop\KefirTest\source\kefirsSource\Asteroids.Utilities\bin\Debug\Asteroids.Utilities.pdb
-C:\Users\limsh\Desktop\KefirTest\source\kefirsSource\Asteroids.Utilities\obj\Debug\Asteroids.Utilities.csprojAssemblyReference.cache
-C:\Users\limsh\Desktop\KefirTest\source\kefirsSource\Asteroids.Utilities\obj\Debug\Asteroids.Utilities.csproj.CoreCompileInputs.cache
-C:\Users\limsh\Desktop\KefirTest\source\kefirsSource\Asteroids.Utilities\obj\Debug\Asteroids.Utilities.dll
-C:\Users\limsh\Desktop\KefirTest\source\kefirsSource\Asteroids.Utilities\obj\Debug\Asteroids.Utilities.pdb
