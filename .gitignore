@@ -72,3 +72,27 @@ UnityProject/obj/
 UnityProject/UserSettings/
 
 source/kefirsSource/.idea/
+
+source/kefirsSource/Asteroids.View/bin/
+
+source/kefirsSource/Asteroids.View/obj/
+
+source/kefirsSource/Asteroids.Presenters/bin/
+
+source/kefirsSource/Asteroids.Presenters/obj/
+
+source/kefirsSource/Asteroids.Core/bin/
+
+source/kefirsSource/Asteroids.Core/obj/
+
+source/kefirsSource/Asteroids.Data/bin/
+
+source/kefirsSource/Asteroids.Data/obj/
+
+source/kefirsSource/Asteroids.Description/bin/
+
+source/kefirsSource/Asteroids.Description/obj/
+
+source/kefirsSource/Asteroids.Utilities/bin/
+
+source/kefirsSource/Asteroids.Utilities/obj/
