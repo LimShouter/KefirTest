@@ -37,10 +37,5 @@ namespace Asteroids.Core.Pull
         {
             _queue.Enqueue(component);
         }
-
-        public int GetMaxCount()
-        {
-            return _container.GetStartCount();
-        }
     }
 }

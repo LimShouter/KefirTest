@@ -27,23 +27,21 @@ namespace Asteroids.Presenters.Shot
             _factory.Attach();
             _bulletReloadTimer.OnNotify += BulletReload;
             _laserReloadTimer.OnNotify += LaserReload;
-            _data.ShotUpdater.OnUpdate += Update;
+            _data.OnUpdate += Update;
             _environment.EnvironmentData.InputData.OnFire += Fire;
             _environment.EnvironmentData.InputData.OnBlast += Blast;
             _environment.CollectionContainer.TimerCollection.Add(_bulletReloadTimer);
             _environment.CollectionContainer.TimerCollection.Add(_laserReloadTimer);
-            _environment.CollectionContainer.UpdaterCollection.Add(_data.ShotUpdater);
         }
 
         public void Detach()
         {
             _factory.Detach();
-            _data.ShotUpdater.OnUpdate -= Update;
+            _data.OnUpdate -= Update;
             _bulletReloadTimer.OnNotify -= BulletReload;
             _laserReloadTimer.OnNotify -= BulletReload;
             _environment.EnvironmentData.InputData.OnFire -= Fire;
             _environment.EnvironmentData.InputData.OnBlast -= Blast;
-            _environment.CollectionContainer.UpdaterCollection.Remove(_data.ShotUpdater);
             _environment.CollectionContainer.TimerCollection.Remove(_bulletReloadTimer);
             _environment.CollectionContainer.TimerCollection.Remove(_laserReloadTimer);
         }

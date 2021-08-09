@@ -21,20 +21,18 @@ namespace Asteroids.Presenters.Enemies
 
         public void Attach()
         {
-            _data.EnemyUpdater.OnUpdate += Update;
+            _data.OnUpdate += Update;
             _factory.Attach();
             _spawnTimer.OnNotify += Create;
             _environment.CollectionContainer.TimerCollection.Add(_spawnTimer);
-            _environment.CollectionContainer.UpdaterCollection.Add(_data.EnemyUpdater);
         }
 
         public void Detach()
         {
-            _data.EnemyUpdater.OnUpdate -= Update;
+            _data.OnUpdate -= Update;
             _factory.Detach();
             _spawnTimer.OnNotify -= Create;
             _environment.CollectionContainer.TimerCollection.Remove(_spawnTimer);
-            _environment.CollectionContainer.UpdaterCollection.Remove(_data.EnemyUpdater);
         }
 
         private void Update()

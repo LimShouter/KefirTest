@@ -27,7 +27,7 @@ namespace Asteroids.Presenters.Enemies
 
         public void Detach()
         {
-            _environment.EnvironmentData.EnemyData.EnemyUpdater.OnUpdate -= Update;
+            _environment.EnvironmentData.EnemyData.OnUpdate -= Update;
             _view.OnKill -= Kill;
             _view.Hide();
         }

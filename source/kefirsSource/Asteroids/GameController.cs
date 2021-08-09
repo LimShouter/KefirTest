@@ -42,7 +42,8 @@ namespace Asteroids
         public void Update(float deltaTime)
         {
             _environment.CollectionContainer.TimerCollection.Update(deltaTime);
-            _environment.CollectionContainer.UpdaterCollection.Update();
+            _environment.EnvironmentData.ShotData.Update();
+            _environment.EnvironmentData.EnemyData.Update();
         }
     }
 }
