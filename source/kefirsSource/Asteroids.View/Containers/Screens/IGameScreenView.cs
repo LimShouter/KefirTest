@@ -1,5 +1,4 @@
-﻿using Asteroids.View.ViewManagers.Screens;
-using Asteroids.View.ViewManagers.Screens.GameScreenView;
+﻿using Asteroids.View.ViewManagers.Screens.GameScreenView;
 
 namespace Asteroids.View.Containers.Screens
 {

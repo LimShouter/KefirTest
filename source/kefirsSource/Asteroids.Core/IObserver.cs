@@ -4,6 +4,5 @@
     {
         void Activate();
         void Deactivate();
-        
     }
 }

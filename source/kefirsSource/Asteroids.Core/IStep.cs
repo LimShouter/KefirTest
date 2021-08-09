@@ -4,6 +4,6 @@ namespace Asteroids.Core
 {
     public interface IStep
     {
-        void Execute(List<IPresenter> presenters, EnvironmentData environmentData, IEnvironmentView environmentView);
+        void Execute(List<IPresenter> presenters, Environment environment, IEnvironmentView environmentView);
     }
 }

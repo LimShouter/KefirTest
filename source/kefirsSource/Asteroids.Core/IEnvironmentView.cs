@@ -1,8 +1,6 @@
-﻿using Asteroids.View;
-using Asteroids.View.Containers;
+﻿using Asteroids.View.Containers;
 using Asteroids.View.Containers.Screens;
 using Asteroids.View.ViewManagers;
-using Asteroids.View.ViewManagers.Screens;
 
 namespace Asteroids.Core
 {
@@ -12,7 +10,7 @@ namespace Asteroids.Core
         IShipView ShipView { get; }
 
         IPullContainerCollection PullContainerCollection { get; }
-        IStartScreenView StartScreenView { get;}
+        IStartScreenView StartScreenView { get; }
         IGameScreenView GameScreenView { get; }
         IRematchScreenView RematchScreenView { get; }
     }

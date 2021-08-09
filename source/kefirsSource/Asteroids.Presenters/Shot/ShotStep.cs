@@ -5,9 +5,9 @@ namespace Asteroids.Presenters.Shot
 {
     public class ShotStep : IStep
     {
-        public void Execute(List<IPresenter> presenters, EnvironmentData environmentData, IEnvironmentView environmentView)
+        public void Execute(List<IPresenter> presenters, Environment environment, IEnvironmentView environmentView)
         {
-            var presenter = new ShotPresenter(environmentData,environmentData.ShotData);
+            var presenter = new ShotPresenter(environment, environment.EnvironmentData.ShotData);
             presenters.Add(presenter);
         }
     }

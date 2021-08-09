@@ -4,7 +4,7 @@ namespace Asteroids.Data.Updater
 {
     public class UpdaterCollection
     {
-        private List<Updater> _updaters = new List<Updater>();
+        private readonly List<Updater> _updaters = new List<Updater>();
 
         public void Add(Updater updater)
         {
@@ -23,10 +23,7 @@ namespace Asteroids.Data.Updater
 
         public void Update()
         {
-            foreach (var updater in _updaters)
-            {
-                updater.Update();
-            }
+            foreach (var updater in _updaters) updater.Update();
         }
     }
 }

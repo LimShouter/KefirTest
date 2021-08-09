@@ -5,9 +5,9 @@ namespace Asteroids.Presenters.Enemies
 {
     public class EnemyStep : IStep
     {
-        public void Execute(List<IPresenter> presenters, EnvironmentData environmentData, IEnvironmentView environmentView)
+        public void Execute(List<IPresenter> presenters, Environment environment, IEnvironmentView environmentView)
         {
-            var presenter = new EnemyPresenter(environmentData,environmentData.EnemyData);
+            var presenter = new EnemyPresenter(environment, environment.EnvironmentData.EnemyData);
             presenters.Add(presenter);
         }
     }

@@ -1,17 +1,16 @@
-﻿using System;
-using Asteroids.Description;
+﻿using Asteroids.Description;
 
 namespace Asteroids.Data
 {
     public class ScoreData
     {
+        public readonly ReactField<int> CurrentScore = new ReactField<int>();
+        public readonly ReactField<int> MaxScore = new ReactField<int>();
         public readonly ScoreDescription ScoreDescription;
+        public int KillScore;
 
 
         public int TimeScore;
-        public int KillScore;
-        public readonly ReactField<int> MaxScore  = new ReactField<int>();
-        public readonly ReactField<int> CurrentScore = new ReactField<int>();
 
         public ScoreData(ScoreDescription scoreDescription)
         {

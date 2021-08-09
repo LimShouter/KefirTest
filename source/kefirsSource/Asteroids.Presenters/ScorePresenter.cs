@@ -6,31 +6,31 @@ namespace Asteroids.Presenters
 {
     public class ScorePresenter : IPresenter
     {
-        private readonly EnvironmentData _environmentData;
         private readonly ScoreData _data;
+        private readonly Environment _environment;
         private readonly Timer _timer = new Timer(1, true);
 
-        public ScorePresenter(EnvironmentData environmentData, ScoreData data)
+        public ScorePresenter(Environment environment, ScoreData data)
         {
-            _environmentData = environmentData;
+            _environment = environment;
             _data = data;
         }
 
         public void Attach()
         {
-            _data.SetMaxScore(_environmentData.SaveModel.Get<int>("MaxScore"));
-            _environmentData.EnemyData.EnemyFactoryData.OnKill += AddKillScore;
+            _data.SetMaxScore(_environment.EnvironmentData.SaveModel.Get<int>("MaxScore"));
+            _environment.EnvironmentData.EnemyData.EnemyFactoryData.OnKill += AddKillScore;
             _timer.OnNotify += AddTimeScore;
-            _environmentData.TimerCollection.Add(_timer);
+            _environment.CollectionContainer.TimerCollection.Add(_timer);
         }
 
         public void Detach()
         {
             _data.KillScore = 0;
             _data.TimeScore = 0;
-            _environmentData.EnemyData.EnemyFactoryData.OnKill -= AddKillScore;
+            _environment.EnvironmentData.EnemyData.EnemyFactoryData.OnKill -= AddKillScore;
             _timer.OnNotify -= AddTimeScore;
-            _environmentData.TimerCollection.Remove(_timer);
+            _environment.CollectionContainer.TimerCollection.Remove(_timer);
         }
 
         private void AddTimeScore()
@@ -52,7 +52,7 @@ namespace Asteroids.Presenters
             if (score > _data.MaxScore.Value)
             {
                 _data.SetMaxScore(score);
-                _environmentData.SaveModel.Set("MaxScore", _data.MaxScore);
+                _environment.EnvironmentData.SaveModel.Set("MaxScore", _data.MaxScore);
             }
         }
     }

@@ -1,20 +1,20 @@
 ﻿using Asteroids.Core;
 using Asteroids.Data.Screens;
 using Asteroids.View.Containers.Screens;
-using Asteroids.View.ViewManagers.Screens;
 
-namespace Asteroids.Presenters.Screens
+namespace Asteroids.Presenters.Screens.RematchScreen
 {
-    public class RematchScreenPresenter : BaseScreenPresenter<RematchScreenData,IRematchScreenView>
+    public class RematchScreenPresenter : BaseScreenPresenter<RematchScreenData, IRematchScreenView>
     {
-        public RematchScreenPresenter(EnvironmentData environmentData, RematchScreenData data, IRematchScreenView view) : base(environmentData, data, view)
+        public RematchScreenPresenter(Environment environment, RematchScreenData data, IRematchScreenView view) : base(
+            environment, data, view)
         {
         }
 
         public override void Attach()
         {
             base.Attach();
-            _view.ScoreTextView.SetScore(_environmentData.ScoreData.CurrentScore.Value);
+            _view.ScoreTextView.SetScore(_environment.EnvironmentData.ScoreData.CurrentScore.Value);
             _view.OnPlay += Play;
         }
 
@@ -26,7 +26,7 @@ namespace Asteroids.Presenters.Screens
 
         private void Play()
         {
-            _environmentData.GameManagerData.Play();
+            _environment.EnvironmentData.GameManagerData.Play();
         }
     }
 }

@@ -7,9 +7,8 @@
 
         public Vector2()
         {
-            
         }
-        
+
         public Vector2(float x, float y)
         {
             X = x;

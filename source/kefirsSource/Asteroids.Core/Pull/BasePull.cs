@@ -22,23 +22,12 @@ namespace Asteroids.Core.Pull
 
         public virtual void Dispose()
         {
-            for (int i = 0; i < _queue.Count; i++)
-            {
-                _container.DestroyObject(_queue.Dequeue());
-            }
-        }
-
-        public int GetMaxCount()
-        {
-            return _container.GetStartCount();
+            for (var i = 0; i < _queue.Count; i++) _container.DestroyObject(_queue.Dequeue());
         }
 
         public TComponent Get()
         {
-            if (_queue.Count == 0)
-            {
-                _queue.Enqueue(_container.CreateObject());
-            }
+            if (_queue.Count == 0) _queue.Enqueue(_container.CreateObject());
 
             var pullObject = _queue.Dequeue();
             return pullObject;
@@ -47,6 +36,11 @@ namespace Asteroids.Core.Pull
         public virtual void Put(TComponent component)
         {
             _queue.Enqueue(component);
+        }
+
+        public int GetMaxCount()
+        {
+            return _container.GetStartCount();
         }
     }
 }

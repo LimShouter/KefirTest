@@ -7,15 +7,16 @@ namespace Asteroids
 {
     public class GameController
     {
-        private readonly EnvironmentData _environmentData;
+        private readonly Environment _environment;
         private readonly IEnvironmentView _environmentView;
-        private readonly StepExecutor _stepExecutor = new StepExecutor();
         private readonly List<IPresenter> _globalPresenters = new List<IPresenter>();
+        private readonly StepExecutor _stepExecutor = new StepExecutor();
 
-        public GameController(DescriptionCollection descriptionCollection,ISaveModel saveModel, IEnvironmentView environmentView)
+        public GameController(DescriptionCollection descriptionCollection, ISaveModel saveModel,
+            IEnvironmentView environmentView)
         {
             _environmentView = environmentView;
-            _environmentData = new EnvironmentData(descriptionCollection,saveModel);
+            _environment = new Environment(descriptionCollection, saveModel);
         }
 
         public void Awake()
@@ -23,26 +24,25 @@ namespace Asteroids
             _stepExecutor.Add(new GameManagerStep());
             _stepExecutor.Add(new ScreensStep());
         }
-        
+
         public void Start()
         {
-            _environmentData.AlienPull.Init(_environmentView.PullContainerCollection.AlienPullContainer);
-            _environmentData.AsteroidPull.Init(_environmentView.PullContainerCollection.AsteroidPullContainer);
-            _environmentData.AsteroidPiecePull.Init(_environmentView.PullContainerCollection.AsteroidPiecePullContainer);
-            _environmentData.ShotsPull.Init(_environmentView.PullContainerCollection.ShotPullContainer);
-            _environmentData.LaserPull.Init(_environmentView.PullContainerCollection.LaserPullContainer);
-            _stepExecutor.Execute(_globalPresenters,_environmentData,_environmentView);
-            foreach (var presenter in _globalPresenters)
-            {
-                presenter.Attach();
-            }
-            _environmentData.ScreenData.StartScreenData.Show();
+            _environment.PullCollection.AlienPull.Init(_environmentView.PullContainerCollection.AlienPullContainer);
+            _environment.PullCollection.AsteroidPull.Init(
+                _environmentView.PullContainerCollection.AsteroidPullContainer);
+            _environment.PullCollection.AsteroidPiecePull.Init(_environmentView.PullContainerCollection
+                .AsteroidPiecePullContainer);
+            _environment.PullCollection.ShotsPull.Init(_environmentView.PullContainerCollection.ShotPullContainer);
+            _environment.PullCollection.LaserPull.Init(_environmentView.PullContainerCollection.LaserPullContainer);
+            _stepExecutor.Execute(_globalPresenters, _environment, _environmentView);
+            foreach (var presenter in _globalPresenters) presenter.Attach();
+            _environment.EnvironmentData.ScreenData.StartScreenData.Show();
         }
 
         public void Update(float deltaTime)
         {
-            _environmentData.TimerCollection.Update(deltaTime);
-            _environmentData.UpdaterCollection.Update();
+            _environment.CollectionContainer.TimerCollection.Update(deltaTime);
+            _environment.CollectionContainer.UpdaterCollection.Update();
         }
     }
 }

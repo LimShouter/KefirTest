@@ -6,16 +6,17 @@ namespace Asteroids.Presenters.Screens.GameScreen
 {
     public class HealthObserver : IObserver
     {
+        private readonly IHealthView _healthView;
         private readonly ReactField<int> _hp;
         private readonly int _maxHp;
-        private readonly IHealthView _healthView;
 
-        public HealthObserver(ReactField<int> hp,int maxHp,IHealthView healthView)
+        public HealthObserver(ReactField<int> hp, int maxHp, IHealthView healthView)
         {
             _hp = hp;
             _maxHp = maxHp;
             _healthView = healthView;
         }
+
         public void Activate()
         {
             _hp.OnNotifyChanged += _healthView.SetHealth;
@@ -27,6 +28,5 @@ namespace Asteroids.Presenters.Screens.GameScreen
         {
             _hp.OnNotifyChanged -= _healthView.SetHealth;
         }
-
     }
 }

@@ -5,10 +5,9 @@ namespace Asteroids.Data
 {
     public class GameManagerData
     {
+        public BaseScreenData CurrentScreen;
         public event Action OnPlay;
         public event Action OnStop;
-
-        public BaseScreenData CurrentScreen;
 
         public void Play()
         {

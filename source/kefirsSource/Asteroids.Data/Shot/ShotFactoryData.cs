@@ -5,19 +5,16 @@ namespace Asteroids.Data.Shot
 {
     public class ShotFactoryData
     {
+        public readonly List<SubShotData> DeletedDatas = new List<SubShotData>();
+
+        public readonly List<SubShotData> SubShotDatas = new List<SubShotData>();
 
         public event Action<ShotType> OnCreate;
         public event Action OnUpdate;
-        
-        public readonly List<SubShotData> SubShotDatas = new List<SubShotData>();
-        public readonly List<SubShotData> DeletedDatas = new List<SubShotData>();
 
         public void Destroy(SubShotData obj)
         {
-            if (!DeletedDatas.Contains(obj))
-            {
-                DeletedDatas.Add(obj);
-            }
+            if (!DeletedDatas.Contains(obj)) DeletedDatas.Add(obj);
         }
 
         public void Create(ShotType type)

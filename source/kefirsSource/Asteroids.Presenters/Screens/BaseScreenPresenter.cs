@@ -1,22 +1,23 @@
 ﻿using Asteroids.Core;
 using Asteroids.Data.Screens;
 using Asteroids.View.Containers.Screens;
-using Asteroids.View.ViewManagers.Screens;
 
 namespace Asteroids.Presenters.Screens
 {
-    public abstract class BaseScreenPresenter<TData,TView> : IPresenter where TData : BaseScreenData where TView : IScreenView
+    public abstract class BaseScreenPresenter<TData, TView> : IPresenter
+        where TData : BaseScreenData where TView : IScreenView
     {
-        protected readonly EnvironmentData _environmentData;
         protected readonly TData _data;
+        protected readonly Environment _environment;
         protected readonly TView _view;
 
-        protected BaseScreenPresenter(EnvironmentData environmentData,TData data,TView view)
+        protected BaseScreenPresenter(Environment environment, TData data, TView view)
         {
-            _environmentData = environmentData;
+            _environment = environment;
             _data = data;
             _view = view;
         }
+
         public virtual void Attach()
         {
             _data.OnShow += Show;
@@ -39,7 +40,7 @@ namespace Asteroids.Presenters.Screens
         {
             _view.Init();
             _view.Show();
-            _environmentData.GameManagerData.CurrentScreen = _data;
+            _environment.EnvironmentData.GameManagerData.CurrentScreen = _data;
         }
     }
 }

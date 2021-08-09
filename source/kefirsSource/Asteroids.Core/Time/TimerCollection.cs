@@ -6,6 +6,11 @@ namespace Asteroids.Core.Time
     {
         private readonly List<ITimer> _times = new List<ITimer>();
 
+        public void Update(float deltaTime)
+        {
+            foreach (var time in _times) time.Update(deltaTime);
+        }
+
         public void Add(ITimer timer)
         {
             _times.Add(timer);
@@ -14,14 +19,6 @@ namespace Asteroids.Core.Time
         public void Remove(ITimer timer)
         {
             _times.Remove(timer);
-        }
-
-        public void Update(float deltaTime)
-        {
-            foreach (var time in _times)
-            {
-                time.Update(deltaTime);
-            }
         }
     }
 }

@@ -1,13 +1,13 @@
 ﻿using Asteroids.Core;
 using Asteroids.Data.Screens;
 using Asteroids.View.Containers.Screens;
-using Asteroids.View.ViewManagers.Screens;
 
-namespace Asteroids.Presenters.Screens
+namespace Asteroids.Presenters.Screens.StartScreen
 {
-    public class StartScreenPresenter : BaseScreenPresenter<StartScreenData,IStartScreenView>
+    public class StartScreenPresenter : BaseScreenPresenter<StartScreenData, IStartScreenView>
     {
-        public StartScreenPresenter(EnvironmentData environmentData, StartScreenData data, IStartScreenView view) : base(environmentData, data, view)
+        public StartScreenPresenter(Environment environment, StartScreenData data, IStartScreenView view) : base(
+            environment, data, view)
         {
         }
 
@@ -25,7 +25,7 @@ namespace Asteroids.Presenters.Screens
 
         private void Play()
         {
-            _environmentData.GameManagerData.Play();
+            _environment.EnvironmentData.GameManagerData.Play();
         }
     }
 }

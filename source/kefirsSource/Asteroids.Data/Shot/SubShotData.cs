@@ -5,21 +5,22 @@ namespace Asteroids.Data.Shot
 {
     public class SubShotData
     {
-        public event Action OnUpdate;
+        public readonly float LifeTime;
+        public readonly float Rotation;
         public readonly ShotType Type;
         public int Hp;
-        public readonly float LifeTime;
         public Vector2 Position;
-        public readonly float Rotation;
 
         public SubShotData(Vector2 position, float rotation, int hp, float lifeTime, ShotType type)
         {
             Position = position;
             Rotation = rotation;
             Hp = hp;
-            this.Type = type;
+            Type = type;
             LifeTime = lifeTime;
         }
+
+        public event Action OnUpdate;
 
         public void Update()
         {

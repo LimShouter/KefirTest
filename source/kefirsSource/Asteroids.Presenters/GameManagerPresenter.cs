@@ -8,16 +8,16 @@ namespace Asteroids.Presenters
 {
     public class GameManagerPresenter : IPresenter
     {
-        private readonly EnvironmentData _environmentData;
         private readonly GameManagerData _data;
+        private readonly Environment _environment;
         private readonly IEnvironmentView _environmentView;
         private readonly List<IPresenter> _gamePresenters = new List<IPresenter>();
         private readonly StepExecutor _gameStepExecutor = new StepExecutor();
 
-        public GameManagerPresenter(EnvironmentData environmentData, GameManagerData data,
+        public GameManagerPresenter(Environment environment, GameManagerData data,
             IEnvironmentView environmentView)
         {
-            _environmentData = environmentData;
+            _environment = environment;
             _data = data;
             _environmentView = environmentView;
         }
@@ -26,7 +26,7 @@ namespace Asteroids.Presenters
         {
             _data.OnPlay += Play;
             _data.OnStop += Stop;
-            _data.CurrentScreen = _environmentData.ScreenData.StartScreenData;
+            _data.CurrentScreen = _environment.EnvironmentData.ScreenData.StartScreenData;
         }
 
         public void Detach()
@@ -42,25 +42,19 @@ namespace Asteroids.Presenters
             _gameStepExecutor.Add(new ScoreStep());
             _gameStepExecutor.Add(new InputStep());
             _gameStepExecutor.Add(new EnemyStep());
-            _gameStepExecutor.Execute(_gamePresenters, _environmentData, _environmentView);
-            foreach (var presenter in _gamePresenters)
-            {
-                presenter.Attach();
-            }
+            _gameStepExecutor.Execute(_gamePresenters, _environment, _environmentView);
+            foreach (var presenter in _gamePresenters) presenter.Attach();
             _data.CurrentScreen.Hide();
-            _environmentData.ScreenData.GameScreenData.Show();
+            _environment.EnvironmentData.ScreenData.GameScreenData.Show();
         }
 
         private void Stop()
         {
             _gameStepExecutor.Clear();
-            foreach (var presenter in _gamePresenters)
-            {
-                presenter.Detach();
-            }
+            foreach (var presenter in _gamePresenters) presenter.Detach();
             _gamePresenters.Clear();
             _data.CurrentScreen.Hide();
-            _environmentData.ScreenData.RematchScreenData.Show();
+            _environment.EnvironmentData.ScreenData.RematchScreenData.Show();
         }
     }
 }

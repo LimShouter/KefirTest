@@ -7,7 +7,7 @@ namespace Asteroids.View.ViewManagers
     {
         event Action OnKill;
 
-        void SetTransform(Vector2 pos,float direction);
+        void SetTransform(Vector2 pos, float direction);
         Vector2 Move(float direction, float speed);
     }
 }

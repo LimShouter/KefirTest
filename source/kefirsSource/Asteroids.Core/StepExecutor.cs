@@ -4,14 +4,11 @@ namespace Asteroids.Core
 {
     public class StepExecutor : IStep
     {
-        private List<IStep> _steps = new List<IStep>();
-        
-        public void Execute(List<IPresenter> presenters, EnvironmentData environmentData, IEnvironmentView environmentView)
+        private readonly List<IStep> _steps = new List<IStep>();
+
+        public void Execute(List<IPresenter> presenters, Environment environment, IEnvironmentView environmentView)
         {
-            foreach (var step in _steps)
-            {
-                step.Execute(presenters,environmentData,environmentView);
-            }    
+            foreach (var step in _steps) step.Execute(presenters, environment, environmentView);
         }
 
         public void Add(IStep step)

@@ -4,18 +4,18 @@ namespace Asteroids.Core.Time
 {
     public class Timer : ITimer
     {
-        public event Action OnNotify;
-
-        private float _timer;
-        private float Time { get; set; }
         private readonly bool _isLoop;
         private bool _isComplete;
+
+        private float _timer;
 
         public Timer(float timer, bool isLoop)
         {
             _timer = timer;
             _isLoop = isLoop;
         }
+
+        private float Time { get; set; }
 
         public void Update(float deltaTime)
         {
@@ -24,15 +24,13 @@ namespace Asteroids.Core.Time
             {
                 OnNotify?.Invoke();
                 if (_isLoop)
-                {
                     Time -= _timer;
-                }
                 else
-                {
                     _isComplete = true;
-                }
             }
         }
+
+        public event Action OnNotify;
 
         public void ChangeTime(float time)
         {
