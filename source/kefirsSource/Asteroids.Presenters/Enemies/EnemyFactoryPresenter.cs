@@ -57,11 +57,11 @@ namespace Asteroids.Presenters.Enemies
         {
             var random = _environment.EnvironmentData.Random;
             var spawnArea =
-                _environment.EnvironmentData.SpawnAreas[
-                    random.Next(0, _environment.EnvironmentData.SpawnAreas.Count - 1)];
+                _environment.GameStaticFields.SpawnAreas[
+                    random.Next(0, _environment.GameStaticFields.SpawnAreas.Count - 1)];
             var position = new Vector2(random.Next(spawnArea.XMin, spawnArea.XMax),
                 random.Next(spawnArea.YMin, spawnArea.YMax));
-            var gameArea = _environment.EnvironmentData.GameArea;
+            var gameArea = _environment.GameStaticFields.GameArea;
             var directionPos = new Vector2(random.Next(gameArea.XMin, gameArea.XMax),
                 random.Next(gameArea.XMin, gameArea.YMin));
             var direction = Math.Atan2(directionPos.X - position.X, directionPos.Y - position.Y) * 180 / Math.PI;

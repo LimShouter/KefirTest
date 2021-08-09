@@ -46,10 +46,10 @@ namespace Asteroids.Presenters.Enemies
 
         protected virtual void Update()
         {
-            if (_data.Position.X > _environment.EnvironmentData.SpawnAreas[0].XMax ||
-                _data.Position.X < _environment.EnvironmentData.SpawnAreas[3].XMin ||
-                _data.Position.Y > _environment.EnvironmentData.SpawnAreas[0].YMax ||
-                _data.Position.Y < _environment.EnvironmentData.SpawnAreas[0].YMin) OnDestroy();
+            if (_data.Position.X > _environment.GameStaticFields.SpawnAreas[0].XMax ||
+                _data.Position.X < _environment.GameStaticFields.SpawnAreas[3].XMin ||
+                _data.Position.Y > _environment.GameStaticFields.SpawnAreas[0].YMax ||
+                _data.Position.Y < _environment.GameStaticFields.SpawnAreas[0].YMin) OnDestroy();
         }
     }
 }
