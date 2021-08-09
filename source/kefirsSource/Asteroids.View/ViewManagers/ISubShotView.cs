@@ -1,7 +1,7 @@
 ﻿using System;
 using Asteroids.Utilities;
 
-namespace Asteroids.View
+namespace Asteroids.View.ViewManagers
 {
     public interface ISubShotView : IPullObject
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Asteroids.View
+namespace Asteroids.View.ViewManagers
 {
     public interface IInputView
     {

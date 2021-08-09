@@ -1,4 +1,4 @@
-﻿namespace Asteroids.View.Screens
+﻿namespace Asteroids.View.Containers.Screens
 {
     public interface IScreenView : IGameObject
     {

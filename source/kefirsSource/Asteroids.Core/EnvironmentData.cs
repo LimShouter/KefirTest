@@ -8,6 +8,7 @@ using Asteroids.Data.Shot;
 using Asteroids.Data.Updater;
 using Asteroids.Description;
 using Asteroids.View;
+using Asteroids.View.Containers;
 
 namespace Asteroids.Core
 {

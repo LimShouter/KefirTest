@@ -1,4 +1,4 @@
-﻿namespace Asteroids.View
+﻿namespace Asteroids.View.Containers
 {
     public interface ICustomRandom
     {

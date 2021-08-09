@@ -47,15 +47,13 @@ namespace Asteroids.Presenters
 
         private void SetCurrentScore()
         {
-            _data.CurrentScore = _data.TimeScore + _data.KillScore;
-            var score = _data.CurrentScore;
-            if (score > _data.MaxScore)
+            _data.CurrentScore.Value = _data.TimeScore + _data.KillScore;
+            var score = _data.CurrentScore.Value;
+            if (score > _data.MaxScore.Value)
             {
                 _data.SetMaxScore(score);
                 _environmentData.SaveModel.Set("MaxScore", _data.MaxScore);
             }
-
-            _data.SetCurrentScore();
         }
     }
 }

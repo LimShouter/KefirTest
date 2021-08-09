@@ -2,6 +2,7 @@
 using Asteroids.Core;
 using Asteroids.Data.Enemies;
 using Asteroids.View;
+using Asteroids.View.ViewManagers;
 
 namespace Asteroids.Presenters.Enemies
 {

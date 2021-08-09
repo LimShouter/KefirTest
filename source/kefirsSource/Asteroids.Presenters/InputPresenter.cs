@@ -1,6 +1,7 @@
 ﻿using Asteroids.Core;
 using Asteroids.Data;
 using Asteroids.View;
+using Asteroids.View.ViewManagers;
 
 namespace Asteroids.Presenters
 {

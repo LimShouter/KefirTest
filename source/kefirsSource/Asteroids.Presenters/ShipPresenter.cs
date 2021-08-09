@@ -1,6 +1,7 @@
 ﻿using Asteroids.Core;
 using Asteroids.Data;
 using Asteroids.View;
+using Asteroids.View.ViewManagers;
 
 namespace Asteroids.Presenters
 {
@@ -18,7 +19,7 @@ namespace Asteroids.Presenters
         }
         public void Attach()
         {
-            _data.Hp = _data.ShipDescription.Hp;
+            _data.Hp.Value = _data.ShipDescription.Hp;
             _environmentData.InputData.OnMove += Move;
             _view.OnDamage += Damage;
         }
@@ -31,12 +32,11 @@ namespace Asteroids.Presenters
 
         private void Damage()
         {
-            --_data.Hp;
-            if (_data.Hp <= 0  )
+            --_data.Hp.Value;
+            if (_data.Hp.Value <= 0  )
             {
                 _environmentData.GameManagerData.Stop();
             }
-            _data.Damage();
         }
 
         private void Move(float x, float y)

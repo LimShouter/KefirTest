@@ -1,4 +1,6 @@
-﻿namespace Asteroids.View
+﻿using Asteroids.View.ViewManagers;
+
+namespace Asteroids.View.Containers
 {
     public interface IPullContainerCollection
     {

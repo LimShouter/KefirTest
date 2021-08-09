@@ -11,8 +11,6 @@ namespace Asteroids.Presenters.Shot
         private readonly ShotFactoryPresenter _factory;
         private readonly Timer _bulletReloadTimer;
         private readonly Timer _laserReloadTimer;
-        private bool _isBulletReload = true;
-        private bool _isLaserReload = true;
         
 
         public ShotPresenter(EnvironmentData environmentData,ShotData data)
@@ -52,30 +50,27 @@ namespace Asteroids.Presenters.Shot
 
         private void Blast()
         {
-            if (_isLaserReload)
+            if (_data.LaserReload.Value)
             {
                 _data.ShotFactoryData.Create(ShotType.Laser);
                 _laserReloadTimer.Reset();
             }
-            _isLaserReload = false;
-            _environmentData.ScreenData.GameScreenData.SetLaserReloadMarker(_isLaserReload);
+            _data.LaserReload.Value = false;
         }
 
         private void LaserReload()
         {
-            _isLaserReload = true;
-            _environmentData.ScreenData.GameScreenData.SetLaserReloadMarker(_isLaserReload);
+            _data.LaserReload.Value = true;
         }
 
         private void Fire()
         {
-            if (_isBulletReload)
+            if (_data.BulletReload.Value)
             {
                 _data.ShotFactoryData.Create(ShotType.Bullet);
                 _bulletReloadTimer.Reset();
             }
-            _isBulletReload = false;
-            _environmentData.ScreenData.GameScreenData.SetBulletReloadMarker(_isBulletReload);
+            _data.BulletReload.Value = false;
         }
 
         private void Update()
@@ -89,8 +84,7 @@ namespace Asteroids.Presenters.Shot
 
         private void BulletReload()
         {
-            _isBulletReload = true;
-            _environmentData.ScreenData.GameScreenData.SetBulletReloadMarker(_isBulletReload);
+            _data.BulletReload.Value = true;
         }
     }
 }

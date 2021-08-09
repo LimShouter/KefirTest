@@ -1,6 +1,7 @@
 ﻿using Asteroids.Core;
 using Asteroids.Data.Screens;
-using Asteroids.View.Screens;
+using Asteroids.View.Containers.Screens;
+using Asteroids.View.ViewManagers.Screens;
 
 namespace Asteroids.Presenters.Screens
 {
@@ -13,14 +14,13 @@ namespace Asteroids.Presenters.Screens
         public override void Attach()
         {
             base.Attach();
-            _environmentData.ScoreData.OnSetCurrentScore += _view.SetScore;
+            _view.ScoreTextView.SetScore(_environmentData.ScoreData.CurrentScore.Value);
             _view.OnPlay += Play;
         }
 
         public override void Detach()
         {
             base.Detach();
-            _environmentData.ScoreData.OnSetCurrentScore -= _view.SetScore;
             _view.OnPlay -= Play;
         }
 

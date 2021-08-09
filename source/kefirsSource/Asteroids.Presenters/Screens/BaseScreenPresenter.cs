@@ -1,6 +1,7 @@
 ﻿using Asteroids.Core;
 using Asteroids.Data.Screens;
-using Asteroids.View.Screens;
+using Asteroids.View.Containers.Screens;
+using Asteroids.View.ViewManagers.Screens;
 
 namespace Asteroids.Presenters.Screens
 {
