@@ -19,8 +19,8 @@ namespace Asteroids.Presenters.Shot
         {
             _environmentData = environmentData;
             _data = data;
-            _bulletReloadTimer = new Timer(1f / _data.FireRate, true);
-            _laserReloadTimer = new Timer(1f / _data.LaserRate, true);
+            _bulletReloadTimer = new Timer(1f / _data.ShotDescription.FireRate, true);
+            _laserReloadTimer = new Timer(1f / _data.ShotDescription.BlastRate, true);
             _factory = new ShotFactoryPresenter(_environmentData,_data.ShotFactoryData);
         }
         

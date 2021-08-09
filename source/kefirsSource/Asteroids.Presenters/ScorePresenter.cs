@@ -34,7 +34,7 @@ namespace Asteroids.Presenters
 
         private void AddTimeScore()
         {
-            _data.TimeScore += _data.TimeScoreMultiplier;
+            _data.TimeScore += _data.ScoreDescription.TimeMultiplier;
             var score = _data.SetCurrentScore();
             if (score > _data.MaxScore)
             {
@@ -45,7 +45,7 @@ namespace Asteroids.Presenters
 
         private void AddKillScore()
         {
-            _data.KillScore += _data.KillScoreMultiplier;
+            _data.KillScore += _data.ScoreDescription.KillMultiplier;
             var score = _data.SetCurrentScore();
             if (score > _data.MaxScore)
             {

@@ -16,7 +16,7 @@ namespace Asteroids.Presenters.Enemies
             _environmentData = environmentData;
             _data = data;
             _factory= new EnemyFactoryPresenter(_environmentData,_data.EnemyFactoryData);
-            _spawnTimer = new Timer(1f / _data.SpawnRate, true);
+            _spawnTimer = new Timer(1f / _data.EnemyDescription.SpawnRate, true);
         }
         
         public void Attach()
@@ -49,8 +49,8 @@ namespace Asteroids.Presenters.Enemies
         private void Create()
         {
             
-            var enemyId =_environmentData.Random.Next( _data.AlienChance + _data.AsteroidChance);
-            if (enemyId < _data.AlienChance)
+            var enemyId =_environmentData.Random.Next( _data.EnemyDescription.AlienChance + _data.EnemyDescription.AsteroidChance);
+            if (enemyId < _data.EnemyDescription.AlienChance)
             {
                 _data.EnemyFactoryData.Generate(EnemyType.Alien);
             }

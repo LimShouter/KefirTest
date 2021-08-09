@@ -1,24 +1,23 @@
 ﻿using System;
+using Asteroids.Description;
 
 namespace Asteroids.Data
 {
     public class ScoreData
     {
+        public readonly ScoreDescription ScoreDescription;
         public event Action<int> OnSetCurrentScore;
         public event Action<int> OnSetMaxScore;
 
-        public readonly int TimeScoreMultiplier;
-        public readonly int KillScoreMultiplier;
         
         public int MaxScore;
         public int TimeScore;
         public int KillScore;
         private int _currentScore;
 
-        public ScoreData(int timeScoreMultiplier, int killScoreMultiplier)
+        public ScoreData(ScoreDescription scoreDescription)
         {
-            TimeScoreMultiplier = timeScoreMultiplier;
-            KillScoreMultiplier = killScoreMultiplier;
+            ScoreDescription = scoreDescription;
         }
 
         public int SetCurrentScore()

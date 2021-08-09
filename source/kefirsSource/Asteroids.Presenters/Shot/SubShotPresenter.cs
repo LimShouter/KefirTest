@@ -55,7 +55,7 @@ namespace Asteroids.Presenters.Shot
 
         private void Move()
         {
-            _data.Position = _view.Move(_data.Type == ShotType.Bullet?_environmentData.ShotData.BulletSpeed:_environmentData.ShotData.LaserSpeed);
+            _data.Position = _view.Move(_data.Type == ShotType.Bullet?_environmentData.ShotData.ShotDescription.BulletSpeed:_environmentData.ShotData.ShotDescription.LaserSpeed);
         }
     }
 }

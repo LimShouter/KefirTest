@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using Asteroids.Core.Pull.Pulls;
 using Asteroids.Core.Time;
 using Asteroids.Data;
@@ -35,19 +36,16 @@ namespace Asteroids.Core
         public readonly ICustomRandom Random;
         public readonly ISaveModel SaveModel;
 
-        public EnvironmentData(DescriptionCollection descriptions,ISaveModel saveModel)
+        public EnvironmentData(DescriptionCollection descriptions, ISaveModel saveModel)
         {
             SaveModel = saveModel;
             Random = descriptions.CustomRandom;
-            EnemyData = new EnemyData(descriptions.EnemyDescription.MinSpeed, descriptions.EnemyDescription.MaxSpeed,descriptions.EnemyDescription.AlienSpeed,
-                descriptions.EnemyDescription.AlienChance, descriptions.EnemyDescription.AsteroidChance,
-                descriptions.EnemyDescription.SpawnRate);
-            ShotData = new ShotData(descriptions.ShotDescription.BulletSpeed,descriptions.ShotDescription.LaserSpeed, descriptions.ShotDescription.FireRate,descriptions.ShotDescription.BlastRate,descriptions.ShotDescription.BulletHp,descriptions.ShotDescription.LaserHp,descriptions.ShotDescription.ShotLifeTime,descriptions.ShotDescription.LaserLifeTime);
-            ShipData = new ShipData(descriptions.ShipDescription.Speed, descriptions.ShipDescription.Hp);
+            EnemyData = new EnemyData(descriptions.EnemyDescription);
+            ShotData = new ShotData(descriptions.ShotDescription);
+            ShipData = new ShipData(descriptions.ShipDescription);
             SpawnAreas = descriptions.SpawnAreas;
             GameArea = descriptions.GameArea;
-            ScoreData = new ScoreData(descriptions.ScoreDescription.TimeMultiplier,
-                descriptions.ScoreDescription.KillMultiplier);
+            ScoreData = new ScoreData(descriptions.ScoreDescription);
         }
     }
 }

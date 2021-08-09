@@ -52,8 +52,8 @@ namespace Asteroids.Presenters.Shot
         private void Create(ShotType type)
         {
             var data = new SubShotData(_environmentData.ShipData.Position, _environmentData.ShipData.Rotation,
-                type == ShotType.Bullet ? _environmentData.ShotData.BulletHp : _environmentData.ShotData.LaserHp,
-                type == ShotType.Bullet ? _environmentData.ShotData.ShotLifeTime : _environmentData.ShotData.LaserLifeTime,
+                type == ShotType.Bullet ? _environmentData.ShotData.ShotDescription.BulletHp : _environmentData.ShotData.ShotDescription.LaserHp,
+                type == ShotType.Bullet ? _environmentData.ShotData.ShotDescription.ShotLifeTime : _environmentData.ShotData.ShotDescription.LaserLifeTime,
                 type);
             _data.SubShotDatas.Add(data);
             var pull = type == ShotType.Bullet ? _environmentData.ShotsPull : _environmentData.LaserPull;

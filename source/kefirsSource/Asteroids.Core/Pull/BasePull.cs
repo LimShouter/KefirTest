@@ -3,7 +3,7 @@ using Asteroids.View;
 
 namespace Asteroids.Core.Pull
 {
-    public abstract class BasePull<TComponent> : IPull<TComponent> where TComponent : IPullObject
+    public class BasePull<TComponent> : IPull<TComponent> where TComponent : IPullObject
     {
         private readonly Queue<TComponent> _queue = new Queue<TComponent>();
         private IPullContainer<TComponent> _container;

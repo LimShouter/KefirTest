@@ -33,8 +33,8 @@ namespace Asteroids.Presenters.Screens
 
         protected override void Show()
         {
-            _view.SetMaxHp(_environmentData.ShipData.MaxHp);
-            _view.SetCurrentHp(_environmentData.ShipData.MaxHp);
+            _view.SetMaxHp(_environmentData.ShipData.ShipDescription.Hp);
+            _view.SetCurrentHp(_environmentData.ShipData.ShipDescription.Hp);
             base.Show();
         }
     }

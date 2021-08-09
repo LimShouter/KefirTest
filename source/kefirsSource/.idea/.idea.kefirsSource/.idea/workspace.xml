@@ -65,6 +65,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="NEW_TOOLWINDOW_STRIPE_DEFAULTS" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -83,6 +84,7 @@
       <workItem from="1626260991283" duration="2082000" />
       <workItem from="1626297255674" duration="14748000" />
       <workItem from="1628515465953" duration="24000" />
+      <workItem from="1628515540281" duration="997000" />
     </task>
     <servers />
   </component>

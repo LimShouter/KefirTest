@@ -18,7 +18,7 @@ namespace Asteroids.Presenters
         }
         public void Attach()
         {
-            _data.Hp = _data.MaxHp;
+            _data.Hp = _data.ShipDescription.Hp;
             _environmentData.InputData.OnMove += Move;
             _view.OnDamage += Damage;
         }
@@ -41,7 +41,7 @@ namespace Asteroids.Presenters
 
         private void Move(float x, float y)
         {
-            _view.Move(x,y,_data.Speed,out _data.Position,out _data.Rotation);
+            _view.Move(x,y,_data.ShipDescription.Speed,out _data.Position,out _data.Rotation);
         }
     }
 }

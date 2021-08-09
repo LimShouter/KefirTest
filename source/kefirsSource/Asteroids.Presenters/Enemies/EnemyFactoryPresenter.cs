@@ -72,9 +72,9 @@ namespace Asteroids.Presenters.Enemies
         {
             var data = new SubEnemyData(type, type == EnemyType.Asteroid,
                 type == EnemyType.Alien
-                    ? _environmentData.EnemyData.AlienSpeed
-                    : _environmentData.Random.Next((int) _environmentData.EnemyData.MinSpeed,
-                        (int) _environmentData.EnemyData.MaxSpeed), position,
+                    ? _environmentData.EnemyData.EnemyDescription.AlienSpeed
+                    : _environmentData.Random.Next((int) _environmentData.EnemyData.EnemyDescription.MinSpeed,
+                        (int) _environmentData.EnemyData.EnemyDescription.MaxSpeed), position,
                 direction);
             _data.SubEnemyDatas.Add(data);
             ISubEnemyView view = GetPull(type).Get();
