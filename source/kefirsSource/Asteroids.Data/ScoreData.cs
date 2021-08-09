@@ -13,18 +13,16 @@ namespace Asteroids.Data
         public int MaxScore;
         public int TimeScore;
         public int KillScore;
-        private int _currentScore;
+        public int CurrentScore;
 
         public ScoreData(ScoreDescription scoreDescription)
         {
             ScoreDescription = scoreDescription;
         }
 
-        public int SetCurrentScore()
+        public void SetCurrentScore()
         {
-            _currentScore = TimeScore + KillScore;
-            OnSetCurrentScore?.Invoke(_currentScore);
-            return _currentScore;
+            OnSetCurrentScore?.Invoke(CurrentScore);
         }
 
         public void SetMaxScore(int obj)

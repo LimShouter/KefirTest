@@ -10,11 +10,12 @@ namespace Asteroids.Presenters
         private readonly ScoreData _data;
         private readonly Timer _timer = new Timer(1, true);
 
-        public ScorePresenter(EnvironmentData environmentData,ScoreData data)
+        public ScorePresenter(EnvironmentData environmentData, ScoreData data)
         {
             _environmentData = environmentData;
             _data = data;
         }
+
         public void Attach()
         {
             _data.SetMaxScore(_environmentData.SaveModel.Get<int>("MaxScore"));
@@ -35,23 +36,26 @@ namespace Asteroids.Presenters
         private void AddTimeScore()
         {
             _data.TimeScore += _data.ScoreDescription.TimeMultiplier;
-            var score = _data.SetCurrentScore();
-            if (score > _data.MaxScore)
-            {
-                _data.SetMaxScore(score);
-                _environmentData.SaveModel.Set("MaxScore",_data.MaxScore);
-            }
+            SetCurrentScore();
         }
 
         private void AddKillScore()
         {
             _data.KillScore += _data.ScoreDescription.KillMultiplier;
-            var score = _data.SetCurrentScore();
+            SetCurrentScore();
+        }
+
+        private void SetCurrentScore()
+        {
+            _data.CurrentScore = _data.TimeScore + _data.KillScore;
+            var score = _data.CurrentScore;
             if (score > _data.MaxScore)
             {
                 _data.SetMaxScore(score);
-                _environmentData.SaveModel.Set("MaxScore",_data.MaxScore);
+                _environmentData.SaveModel.Set("MaxScore", _data.MaxScore);
             }
+
+            _data.SetCurrentScore();
         }
     }
 }
